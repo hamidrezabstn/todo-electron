@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="cont_main">
+      <div class="cont_to_do_list">
+        <table border="1px solid #0000ff" style="padding:0px;margin:0px;">
+          <tr class="sar_soton">
+            <td>Id</td>
+            <td>Title</td>
+            <td>Edit</td>
+            <td>Delete</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>۱ عنوان عنوان  عنوان عنوان</td>
+            <td>Edit</td>
+            <td>Delete</td>
+            <td class="details" style="display:none;">
+              کارهای انجام شده با جزیات کامل1
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2عنوان نوان نوان نواننوان</td>
+            <td>Edit</td>
+            <td>Delete</td>
+            <td class="details" style="display:none;">
+              کارهای انجام شده با جزیات کامل2
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="cont_main_btn">
+        <a target="" class="btn_add" id="" href="#"></a>
+      </div>
+      <div id="app" @click="clicked">
+        <div v-if="seen">salam</div>
+        {{message}}
+      </div>
+    </div>
+
+<script src="node_modules/vue/dist/vue.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    seen : true
+  },
+  methods :{
+    'clicked' : function(){
+      this.message = this.message + 1
+      this.seen = !this.seen
+    }
+  }
+})
+
+</script>
+  </body>
+</html>
